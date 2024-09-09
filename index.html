@@ -6,9 +6,6 @@
     <title>LifeSuccess.app</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-    <script src="supabase-auth.js" type="module"></script>
-    <script src="script.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -18,84 +15,60 @@
             <button onclick="showTab('myDay')">My Day</button>
             <button onclick="showTab('myWeek')">My Week</button>
         </nav>
-        <div id="authButtons">
-            <button id="loginButton">Log In</button>
-            <button id="signupButton">Sign Up</button>
-            <button id="logoutButton" style="display: none;">Log Out</button>
-        </div>
     </header>
-
     <main>
-        <div id="authForms" style="display: none;">
-            <form id="signupForm">
-                <h2>Sign Up</h2>
-                <input type="email" id="signupEmail" required placeholder="Email">
-                <input type="password" id="signupPassword" required placeholder="Password">
-                <button type="submit">Sign Up</button>
-            </form>
-
-            <form id="loginForm">
-                <h2>Log In</h2>
-                <input type="email" id="loginEmail" required placeholder="Email">
-                <input type="password" id="loginPassword" required placeholder="Password">
-                <button type="submit">Log In</button>
-            </form>
-        </div>
-
-        <div id="debrief" class="section tab-content">
+        <section id="debrief" class="tab-content">
             <h2>Debrief</h2>
-            <!-- Add debrief content here -->
-        </div>
-
-        <div id="myDay" class="section tab-content">
+        </section>
+        <section id="myDay" class="tab-content">
             <h2>My Day</h2>
             <div class="quadrants">
                 <div class="quadrant">
-                    <h3 id="learnings" onclick="toggleDropdown('learnings-day')">Learnings ▼</h3>
+                    <h3>Learnings ▼</h3>
                     <div id="learnings-day" class="dropdown-content"></div>
                 </div>
                 <div class="quadrant">
-                    <h3 id="negative-thoughts" onclick="toggleDropdown('negativeThoughts-day')">Negative Thoughts ▼</h3>
+                    <h3>Negative Thoughts ▼</h3>
                     <div id="negativeThoughts-day" class="dropdown-content"></div>
                 </div>
                 <div class="quadrant">
-                    <h3 id="mess-ups" onclick="toggleDropdown('messUps-day')">Mess-ups ▼</h3>
+                    <h3>Mess-ups ▼</h3>
                     <div id="messUps-day" class="dropdown-content"></div>
                 </div>
                 <div class="quadrant">
-                    <h3 id="wins" onclick="toggleDropdown('wins-day')">Wins ▼</h3>
+                    <h3>Wins ▼</h3>
                     <div id="wins-day" class="dropdown-content"></div>
                 </div>
             </div>
             <div class="chart-container">
                 <canvas id="dayChart"></canvas>
             </div>
-        </div>
-
-        <div id="myWeek" class="section tab-content">
+        </section>
+        <section id="myWeek" class="tab-content">
             <h2>My Week</h2>
             <div class="quadrants">
                 <div class="quadrant">
-                    <h3 id="learnings-1" onclick="toggleDropdown('learnings-week')">Learnings ▼</h3>
+                    <h3>Learnings ▼</h3>
                     <div id="learnings-week" class="dropdown-content"></div>
                 </div>
                 <div class="quadrant">
-                    <h3 id="negative-thoughts-1" onclick="toggleDropdown('negativeThoughts-week')">Negative Thoughts ▼</h3>
+                    <h3>Negative Thoughts ▼</h3>
                     <div id="negativeThoughts-week" class="dropdown-content"></div>
                 </div>
                 <div class="quadrant">
-                    <h3 id="mess-ups-1" onclick="toggleDropdown('messUps-week')">Mess-ups ▼</h3>
+                    <h3>Mess-ups ▼</h3>
                     <div id="messUps-week" class="dropdown-content"></div>
                 </div>
                 <div class="quadrant">
-                    <h3 id="wins-1" onclick="toggleDropdown('wins-week')">Wins ▼</h3>
+                    <h3>Wins ▼</h3>
                     <div id="wins-week" class="dropdown-content"></div>
                 </div>
             </div>
             <div class="chart-container">
                 <canvas id="weekChart"></canvas>
             </div>
-        </div>
+        </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

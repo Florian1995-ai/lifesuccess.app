@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeSuccess.app</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>LifeSuccess.App</title>
+    <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to LifeSuccess.app</h1>
-        <nav>
-            <a href="#" id="signin">Sign In</a>
-            <a href="#" id="login">Login</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Download our Chrome Extension</h2>
-            <p>Track your success with our easy-to-use Chrome extension.</p>
-            <a href="#" class="download-button">Download Extension</a>
-        </section>
-    </main>
-    <script src="scripts/main.js"></script>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="LifeSuccess.App Logo" class="logo">
+            <nav>
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-signup">Sign Up</button>
+            </nav>
+        </header>
+        <main>
+            <h1>Measure outcomes, track personal metrics and win.</h1>
+            <button class="btn btn-download">
+                <img src="chrome.webp" alt="Chrome logo" class="chrome-logo">
+                Download for Google Chrome
+            </button>
+            <p>Get the LifeSuccess App today</p>
+        </main>
+    </div>
+    <script type="module" src="homepage.js"></script>
 </body>
 </html>

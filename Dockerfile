@@ -1,11 +1,17 @@
 # Use the official Nginx image as a parent image
 FROM nginx:alpine
 
-# Copy the static content to the Nginx server
-COPY . /usr/share/nginx/html
+# Create a directory for the app
+WORKDIR /usr/share/nginx/html
 
-# Copy a custom nginx configuration file (if you have one)
-# COPY nginx.conf /etc/nginx/nginx.conf
+# Copy all files
+COPY . .
+
+# Remove the default Nginx configuration file
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy a custom Nginx configuration file
+COPY nginx.conf /etc/nginx/conf.d/
 
 # Expose port 80
 EXPOSE 80

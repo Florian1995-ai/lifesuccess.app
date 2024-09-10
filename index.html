@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeSuccess.app</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="LifeSuccess.app Logo" class="logo">
+        <nav>
+            <button onclick="showTab('debrief')">Debrief</button>
+            <button onclick="showTab('myDay')">My Day</button>
+            <button onclick="showTab('myWeek')">My Week</button>
+        </nav>
+    </header>
+    <main>
+        <section id="debrief" class="tab-content">
+            <h2>Debrief</h2>
+        </section>
+        <section id="myDay" class="tab-content">
+            <h2>My Day</h2>
+            <div class="quadrants">
+                <div class="quadrant">
+                    <h3>Learnings ▼</h3>
+                    <div id="learnings-day" class="dropdown-content"></div>
+                </div>
+                <div class="quadrant">
+                    <h3>Negative Thoughts ▼</h3>
+                    <div id="negativeThoughts-day" class="dropdown-content"></div>
+                </div>
+                <div class="quadrant">
+                    <h3>Mess-ups ▼</h3>
+                    <div id="messUps-day" class="dropdown-content"></div>
+                </div>
+                <div class="quadrant">
+                    <h3>Wins ▼</h3>
+                    <div id="wins-day" class="dropdown-content"></div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="dayChart"></canvas>
+            </div>
+        </section>
+        <section id="myWeek" class="tab-content">
+            <h2>My Week</h2>
+            <div class="quadrants">
+                <div class="quadrant">
+                    <h3>Learnings ▼</h3>
+                    <div id="learnings-week" class="dropdown-content"></div>
+                </div>
+                <div class="quadrant">
+                    <h3>Negative Thoughts ▼</h3>
+                    <div id="negativeThoughts-week" class="dropdown-content"></div>
+                </div>
+                <div class="quadrant">
+                    <h3>Mess-ups ▼</h3>
+                    <div id="messUps-week" class="dropdown-content"></div>
+                </div>
+                <div class="quadrant">
+                    <h3>Wins ▼</h3>
+                    <div id="wins-week" class="dropdown-content"></div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="weekChart"></canvas>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
